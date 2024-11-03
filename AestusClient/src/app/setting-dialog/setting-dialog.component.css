@@ -1,0 +1,89 @@
+/* General container for the dialog */
+.dialog-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    max-width: 500px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Title styling */
+.dialog-container h1 {
+    color: #0056b3;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+}
+
+/* Content styling */
+.dialog-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dialog-container label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Input fields styling */
+.dialog-container .text-input,
+.dialog-container input[type="number"],
+.dialog-container .datetime-input {
+    width: 90%;
+    padding: 12px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+/* Date and time picker specific styling */
+.datetime-input {
+    font-size: 1.2em;
+    padding: 14px;
+    margin-top: 10px;
+}
+
+/* Action buttons styling */
+.dialog-container .dialog-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.dialog-container .dialog-actions .cancel-button,
+.dialog-container .dialog-actions .save-button {
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Cancel button styling */
+.dialog-container .dialog-actions .cancel-button {
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.dialog-container .dialog-actions .cancel-button:hover {
+    background-color: #c9302c;
+}
+
+/* Save button styling */
+.dialog-container .dialog-actions .save-button {
+    color: #fff;
+    background-color: #0056b3;
+}
+
+.dialog-container .dialog-actions .save-button:hover {
+    background-color: #004494;
+}

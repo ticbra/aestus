@@ -1,0 +1,128 @@
+/* General container for the settings */
+.setting-container {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  text-align: center;
+}
+
+/* Styling for h2 headers */
+h2 {
+  color: #0056b3;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+}
+
+/* Current setting container styling */
+.current-setting {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+/* Date picker container styling */
+.date-picker-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Date picker label styling */
+.date-picker-label {
+  font-size: 1em;
+  color: #555;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Date-time input styling */
+.datetime-input {
+  padding: 8px 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  width: 220px;
+  transition: border-color 0.3s;
+}
+
+.datetime-input:focus {
+  border-color: #0056b3;
+}
+
+/* Refresh button styling */
+.refresh-button {
+  padding: 8px 16px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.refresh-button:hover {
+  background-color: #004494;
+}
+
+/* Button styles */
+.btn {
+  padding: 12px 30px;
+  margin: 5px;
+  font-size: 1.1em;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #0056b3;
+}
+
+.btn-primary:hover {
+  background-color: #004494;
+}
+
+.btn-success {
+  background-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Add button container styling */
+.button-container {
+  text-align: left; /* Align button to the left */
+  margin-bottom: 10px; /* Add some space between the button and the table */
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #0056b3;
+  color: white;
+}

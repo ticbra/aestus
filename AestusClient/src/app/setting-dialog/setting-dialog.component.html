@@ -1,0 +1,25 @@
+<div class="dialog-container">
+  <h1 class="dialog-title">{{ setting.value ? 'Ažuriraj Vrijednost' : 'Dodaj Novu Vrijednost' }}</h1>
+  <div class="dialog-content">
+    <form class="dialog-form">
+      <div class="form-field">
+        <label for="name">Naziv</label>
+        <input id="name" type="text" [(ngModel)]="setting.name" name="name" class="text-input" disabled>
+      </div>
+      <div class="form-field">
+        <label for="value">Postotak (%)</label>
+        <input id="value" type="number" [(ngModel)]="setting.value" name="value">
+      </div>
+
+      <div class="form-field">
+        <label for="date">Datum primjene</label>
+        <input type="datetime-local" id="date" [(ngModel)]="setting.effectiveDate" name="date" class="datetime-input" placeholder="Datum i vrijeme">
+      </div>
+      
+    </form>
+  </div>
+  <div class="dialog-actions">
+    <button class="save-button" (click)="onSave()" cdkFocusInitial>Spremi</button>
+    <button class="cancel-button" (click)="onCancel()">Odustani</button>   
+  </div>
+</div>

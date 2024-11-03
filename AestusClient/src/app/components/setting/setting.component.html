@@ -1,0 +1,60 @@
+<div class="setting-container">
+  <h2>Trenutna postavka na datum</h2>
+
+  <!-- Date picker for selecting the effective date -->
+  <div class="form-field date-picker-container">
+    <label for="effective-date" class="date-picker-label">Odaberi datum primjene:</label>
+    <input 
+      type="datetime-local" 
+      id="effective-date" 
+      [(ngModel)]="selectedDate" 
+      (change)="onDateChange()"
+      class="datetime-input"
+      placeholder="Odaberi datum i vrijeme"
+    >
+    <button (click)="onDateChange()" class="btn btn-primary refresh-button">Osvježi</button>
+  </div>
+
+  <!-- Display error message if no setting is found for the selected date -->
+  <div *ngIf="errorMessage; else settingTemplate" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Display current setting if available -->
+  <ng-template #settingTemplate>
+    <div *ngIf="currentSetting" class="current-setting">
+      <p><strong>Ime:</strong> {{ currentSetting.name }}</p>
+      <p><strong>Vrijednost:</strong> {{ currentSetting.value }}%</p>
+      <p><strong>Datum primjene:</strong> {{ currentSetting.effectiveDate | date:'yyyy-MM-dd HH:mm' }}</p>
+    </div>
+  </ng-template>
+
+  <h2>Lista svih postavki</h2>
+
+  <!-- Button to add a new setting, aligned to the left -->
+  <div class="button-container">
+    <button (click)="openAddDialog()" class="btn btn-success add-button">Dodaj</button>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Ime</th>
+        <th>Vrijednost (%)</th>
+        <th>Datum primjene</th>
+        <th>Opcije</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let setting of settings">
+        <td>{{ setting.name }}</td>
+        <td>{{ setting.value }}</td>
+        <td>{{ setting.effectiveDate | date:'yyyy-MM-dd HH:mm' }}</td>
+        <td>
+          <button (click)="openEditDialog(setting)" class="btn btn-primary">Uredi</button>
+          <button (click)="deleteSetting(setting.settingId!)" class="btn btn-danger">Obriši</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
