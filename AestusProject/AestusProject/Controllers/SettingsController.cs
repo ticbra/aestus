@@ -41,7 +41,7 @@ public class SettingsController : ControllerBase
 
     // GET: Dohvati sve postavke
     [HttpGet]
-
+    [ApiExplorerSettings(IgnoreApi = true)]
     public async Task<ActionResult<IEnumerable<Setting>>> GetAllSettings()
     {
         var settings = await _context.Settings.ToListAsync();
